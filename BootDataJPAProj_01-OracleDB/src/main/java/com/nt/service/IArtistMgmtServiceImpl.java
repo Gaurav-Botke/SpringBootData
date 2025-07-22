@@ -1,5 +1,7 @@
 package com.nt.service;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,17 @@ public class IArtistMgmtServiceImpl implements IArtistService {
 	public String registerArtist(Artist artist) {
 	Artist art = artistRepo.save(artist);
 		return (art != null)?"Artist "+art.getId() +"object is saved !":"Artist object is not saved !";
+	}
+	@Override
+	public boolean checkArtistAvailability(int id) {
+	
+		boolean flag = artistRepo.existsById(id);
+		return flag;
+	}
+	@Override
+	public long totalCountOfArtist() {
+		
+		return artistRepo.count();
 	}
 
 }

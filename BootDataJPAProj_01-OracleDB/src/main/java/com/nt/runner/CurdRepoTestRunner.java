@@ -15,10 +15,35 @@ public class CurdRepoTestRunner implements CommandLineRunner {
 	IArtistMgmtServiceImpl artImpl;
 	@Override
 	public void run(String... args) throws Exception {
-		Artist artist = new Artist("NANA", "Side Hero", 10000.00);
-		String msg = artImpl.registerArtist(artist);
-		System.out.println(msg+" "+artist);
 	
+	           // Insert a new record	
+	/*   
+	Artist artist = new Artist("NANA", "Side Hero", 10000.00);
+		try {
+			String msg = artImpl.registerArtist(artist);
+			System.out.println(msg+" "+artist);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+	*/
+		
+		 
+		       //Check the record is there or not
+	/*
+		try {
+			System.out.println("Artist is available ?"+artImpl.checkArtistAvailability(109));
+		} catch (Exception e) {
+		    e.printStackTrace();
+		} 
+	*/
+		
+	       //Check the total record count
+			
+			try {
+				System.out.println(" Total number of Artist is available ::  "+artImpl.totalCountOfArtist());
+			} catch (Exception e) {
+			    e.printStackTrace();
+			} 
 
 	}
 
