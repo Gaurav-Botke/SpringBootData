@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BootDataJpaProj04CurdRepoFindOperationApplication {
+public class BootDataJpaProj04CurdRepoUpdateOperationApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BootDataJpaProj04CurdRepoFindOperationApplication.class, args);
+		SpringApplication.run(BootDataJpaProj04CurdRepoUpdateOperationApplication.class, args);
 	}
 
 }
